@@ -1,0 +1,36 @@
+Initialize engine version: 5.3.5f1 (960ebf59018a)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GT 740M (ID=0xfdf)
+    Vendor:   NVIDIA
+    VRAM:     2019 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\perez\Documents\SourceTree\SpaceShooter\SpaceShooterTest\Build\Build_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\perez\Documents\SourceTree\SpaceShooter\SpaceShooterTest\Build\Build_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\perez\Documents\SourceTree\SpaceShooter\SpaceShooterTest\Build\Build_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\perez\Documents\SourceTree\SpaceShooter\SpaceShooterTest\Build\Build_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\perez\Documents\SourceTree\SpaceShooter\SpaceShooterTest\Build\Build_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\perez\Documents\SourceTree\SpaceShooter\SpaceShooterTest\Build\Build_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\perez\Documents\SourceTree\SpaceShooter\SpaceShooterTest\Build\Build_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\perez\Documents\SourceTree\SpaceShooter\SpaceShooterTest\Build\Build_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.521 seconds
+Platform assembly: C:\Users\perez\Documents\SourceTree\SpaceShooter\SpaceShooterTest\Build\Build_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\perez\Documents\SourceTree\SpaceShooter\SpaceShooterTest\Build\Build_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 60Hz; virtual: 2726x772 at -1360,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.117459 ms
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 10d8 -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 10.979591 ms
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 486.
+Total: 0.610045 ms (FindLiveObjects: 0.055831 ms CreateObjectMapping: 0.036126 ms MarkObjects: 0.500434 ms  DeleteObjects: 0.016421 ms)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 436)
+

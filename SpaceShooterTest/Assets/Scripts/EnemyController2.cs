@@ -21,5 +21,6 @@ public class EnemyController2 : MonoBehaviour
     {
         Instantiate(shotPrefab, shotSpawn.position, shotSpawn.rotation);
         Instantiate(shotPrefab, shotSpawn2.position, shotSpawn2.rotation);
+        audioS.Play();
     }
 }

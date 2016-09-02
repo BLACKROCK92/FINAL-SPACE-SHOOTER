@@ -28,21 +28,22 @@ public class DestroyByContact : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             gameObject.SetActive(false);
-            Destroy(gameObject, 0.001f);
-            Destroy(other.gameObject, 0.001f);
+            Destroy(gameObject, 0.01f);
+            Destroy(other.gameObject, 0.01f);
             Instantiate(explosion, transform.position, transform.rotation);
 
             if (other.tag == "Player")
             {
                 Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
                 gameController.TakeLife(-1);
-                if(gameController.getLives() > 0)
+                if (gameController.getLives() <= 0)
+                {
+                    gameController.StartCoroutine(gameController.EndGame());
+                }
+
+                if (gameController.getLives() > 0)
                 {
                     gameController.GameOver();
-                }
-                else
-                {
-                    gameController.EndGame();
                 }
             }
 

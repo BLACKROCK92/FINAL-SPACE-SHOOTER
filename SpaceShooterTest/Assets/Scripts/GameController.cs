@@ -57,9 +57,9 @@ public class GameController : MonoBehaviour
 
             if (gameOver)
             {
-                if (getLives() > 0)
+                if (getLives() >= 1)
                 {
-                    restartText.text = "Press 'R' for Restart!";
+                    restartText.text = "Press 'R' to Respawn!";
                     restart = true;
                     break;
                 }
@@ -73,8 +73,7 @@ public class GameController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
-                Respawn();                
-                //SceneManager.LoadScene("MainScene");
+                Respawn();
             }
         }
 
@@ -91,23 +90,24 @@ public class GameController : MonoBehaviour
             Time.timeScale = 0;
             pauseText.text = "Game Paused\nPress ESC to resume!";
             paused = false;
-        }else
+        }
+        else
         {
             paused = true;
             Time.timeScale = 1;
             pauseText.text = "";
         }
+
     }
 
     void Respawn()
     {
-        score = 0;
-        UpdateScore();
         Instantiate(playerGO, new Vector3(0, 0, 0), Quaternion.identity);
         restart = false;
         gameOver = false;
         restartText.text = "";
         gameOverText.text = "";
+        endGameText.text = "";
         StartCoroutine(SpawnWaves());
     }
 
@@ -137,21 +137,24 @@ public class GameController : MonoBehaviour
     {
         if (getLives() > 0)
         {
-            gameOverText.text = "You have " + getLives() + " live(s) remaining!";
+            gameOverText.text = "You have " + getLives() + " live(s) remaining !";
             gameOver = true;
-        }
-        if (getLives() <= 0)
-        {
-            EndGame();
         }
 
     }
 
-    public void EndGame()
+    public IEnumerator EndGame()
     {
-        gameOverText.text = "Game exiting in 3 seconds";
+        endGameText.text = "Game exiting in 5 seconds\nYour Score was : " + score + "\nThanks for playing !";
+        yield return new WaitForSeconds(5);
         Application.Quit();
-        Debug.Log("QUIT");
+    }
+
+    void Restart()
+    {
+        score = 0;
+        lives = 3;
+        Respawn();
     }
 
     public int getLives()

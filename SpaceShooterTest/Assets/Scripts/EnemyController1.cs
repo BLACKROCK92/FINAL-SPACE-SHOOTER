@@ -19,5 +19,6 @@ public class EnemyController1 : MonoBehaviour
     void Fire()
     {
         Instantiate(shotPrefab, shotSpawn.position, shotSpawn.rotation);
+        audioS.Play();
     }
 }
